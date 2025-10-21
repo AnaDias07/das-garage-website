@@ -1,162 +1,209 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <link rel="icon" type="image/png" href="images/icon.png">
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Das Garage</title>
-  <link rel="alternate" hreflang="nl" href="index.html">
-  <link rel="alternate" hreflang="en" href="en.html">
-  <link rel="alternate" hreflang="x-default" href="index.html">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+  <head>
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <link rel="icon" type="image/png" href="images/icon.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Das Garage</title>
+    <link rel="alternate" hreflang="nl" href="index.html" />
+    <link rel="alternate" hreflang="en" href="en.html" />
+    <link rel="alternate" hreflang="x-default" href="index.html" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- NAV -->
+    <header class="nav">
+      <div class="nav__inner">
+        <div class="brand">DAS GARAGE</div>
+        <div class="spacer"></div>
 
-  <!-- NAV -->
-  <header class="nav">
-    <div class="nav__inner">
-      <div class="brand">DAS GARAGE</div>
-      <div class="spacer"></div>
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About Us</a>
-        <a href="#services">Our Services</a>
-        <a href="#reviews">Reviews</a>
-        <a href="#contact">Contact</a>
-        <a href="index.html" aria-label="Switch to Dutch">NL</a>
-      </nav>
-    </div>
-  </header>
+        <!-- Hamburger (shown only on phones via CSS) -->
+        <button class="nav__toggle" aria-label="Menu" aria-expanded="false">
+          <i data-lucide="menu"></i>
+        </button>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-  <div>
-    <img class="brandmark" src="images/logo-cropped.svg" alt="Das Garage logo" />
-    <a class="cta" href="#contact">INQUIRE NOW</a>
-  </div>
-</section>
+        <!-- Primary links (wrap your links in .nav__links) -->
+        <nav id="primary-menu" class="nav__links">
+          <a href="#home">Home</a>
+          <a href="#about">About Us</a>
+          <a href="#services">Offer</a>
+          <a href="#reviews">Reviews</a>
+          <a href="#contact">Contact</a>
+          <a href="en.html" aria-label="Switch to Dutch">NL</a>
+        </nav>
+      </div>
+    </header>
 
-
-  <!-- ABOUT -->
-  <section id="about">
-    <div class="about">
-      <img src="images/about.jpg" alt="Monteur in de werkplaats">
+    <!-- HERO -->
+    <section id="home" class="hero">
       <div>
-        <h2>About Das Garage</h2>
-        <p>Das Garage is ran by Koen, a enthousiastic MSc student Mechanical engineering with a passion for cars, engineering and driving. The preference for German quality translates to a specialism in Volkswagen, Audi, Seat, Skoda and ofcourse, Porsche. </p>
-        <p>Volkswagen, Audi, Seat, Skoda en natuurlijk Porsche. 
-
-Your at the right address here to maintain this quality! The best care for your car with only A-brand parts, modern tools and the correct diagnoses software.</p>
+        <img
+          class="brandmark"
+          src="images/logo-cropped.svg"
+          alt="Das Garage logo"
+        />
+        <a class="cta" href="#contact">INQUIRE NOW</a>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- SERVICES -->
-  <div class="band" id="services">
-    <h2>Wat We Doen</h2>
-    <div class="rail">
-      <button class="arrow arrow--left" aria-label="Scroll left">‹</button>
-      <div class="scroll" data-rail>
-        <!-- duplicate/modify cards as needed -->
-        <article class="card">
-          <img src="images/maintenance.jpg" alt="Onderhoud">
-          <div class="pad">
-            <h3>Maintenance</h3>
-            <p>Timely maintenance with A-brand parts keeps your car in great shape!</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="images/service-reparatie.jpg" alt="Reparatie">
-          <div class="pad">
-            <h3>Repair</h3>
-            <p>Repairs to the mechanical and electronic parts of the car with exceptional attention to the correct diagnoses</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="images/service-VAGCOM-coding.jpg" alt="VAGCOM Coding">
-          <div class="pad">
-            <h3>VAGCOM coding</h3>
-            <p>Unlocking hidden features and retrtofitted functions using Rosstech VCDS</p>
-          </div>
-        </article>
-        <article class="card">
-          <img src="images/service-VAGCOM-coding.jpg" alt="Leen auto">
-          <div class="pad">
-            <h3>Loaner car</h3>
-            <p>A loaner car is available so you can stay mobile. Ask about availability.</p>
-          </div>
-        </article>
-      </div>
-      <button class="arrow arrow--right" aria-label="Scroll right">›</button>
-    </div>
-  </div>
-
-  <!-- Workshop -->
-  <section id="werkplaats" class="werkplaats">
-    <div class="werkplaats__inner">
-      <div class="werkplaats__copy">
-        <h2>The Workshop</h2>
-        <p>
-          In our new building at De Waal in Best you will find a well equiped modern garage!
-        </p>
-      </div>
-
-      <div class="ig-slider" data-ig>
-        <div class="ig-track">
-          <img class="ig-slide" src="images/garage_photo_1.jpg" alt="Werkplaats foto 1">
-          <img class="ig-slide" src="images/garage_photo_2.jpg" alt="Werkplaats foto 2">
-        </div>
-        <button class="ig-btn ig-prev" aria-label="Vorige">‹</button>
-        <button class="ig-btn ig-next" aria-label="Volgende">›</button>
-        <div class="ig-dots" aria-label="Foto’s"></div>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- REVIEWS -->
-  <section id="reviews">
-    <h2>Customer reviews</h2>
-    <div class="reviews">
-      <div class="review">
-        <p>“Very neat and quick service. My Audi A6 control unit was repaired within a day. Excellent!”</p>
-        <small>— Meho</small>
-      </div>
-      <div class="review">
-        <p>“Good service, very friendly, top!”</p>
-        <small>— Nick</small>
-      </div>
-      <div class="review">
-        <p>“Top service! customeroriented and professional, true recommendation!”</p>
-        <small>— Roy</small>
-      </div>
-    </div>
-  </section>
-
-  <!-- CONTACT -->
-  <div class="band" id="contact">
-    <section>
-      <h2>Contact Details</h2>
-      <div class="contact-card">
-        <div class="contact-grid">
-          <div>
-            <strong>Adres</strong><br>
-            De Waal 83, Best
-          </div>
-          <div>
-            <strong>Email</strong><br>
-            <a href="mailto:dasgarageinfo@gmail.com">dasgarageinfo@gmail.com</a>
-          </div>
-          <div>
-            <strong>Telefoon</strong><br>
-            <a href="tel:+31402542548">+31 40 254 2548</a>
-          </div>
+    <!-- ABOUT -->
+    <section id="about">
+      <div class="about">
+        <img src="images/about.jpg" alt="Monteur in de werkplaats" />
+        <div>
+          <h2>About Das Garage</h2>
+          <p>
+            Das Garage is ran by Koen, a enthousiastic MSc student Mechanical
+            engineering with a passion for cars, engineering and driving. The
+            preference for German quality translates to a specialism in
+            Volkswagen, Audi, Seat, Skoda and ofcourse, Porsche.
+          </p>
+          <p>
+            Your at the right address here to maintain this quality! The best
+            care for your car with only A-brand parts, modern tools and the
+            correct diagnoses software.
+          </p>
         </div>
       </div>
     </section>
-  </div>
-  <script src="script.js"></script>
 
-  <!-- <footer>© <span id="year"></span> This website was made by Ana Dias</footer> -->
-</body>
+    <!-- SERVICES -->
+    <div class="band" id="services">
+      <h2>Wat We Doen</h2>
+      <div class="rail">
+        <button class="arrow arrow--left" aria-label="Scroll left">‹</button>
+        <div class="scroll" data-rail>
+          <!-- duplicate/modify cards as needed -->
+          <article class="card">
+            <img src="images/maintenance.jpg" alt="Onderhoud" />
+            <div class="pad">
+              <h3>Maintenance</h3>
+              <p>
+                Timely maintenance with A-brand parts keeps your car in great
+                shape!
+              </p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/service-reparatie.jpg" alt="Reparatie" />
+            <div class="pad">
+              <h3>Repair</h3>
+              <p>
+                Repairs to the mechanical and electronic parts of the car with
+                exceptional attention to the correct diagnoses
+              </p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/service-VAGCOM-coding.jpg" alt="VAGCOM Coding" />
+            <div class="pad">
+              <h3>VAGCOM coding</h3>
+              <p>
+                Unlocking hidden features and retrtofitted functions using
+                Rosstech VCDS
+              </p>
+            </div>
+          </article>
+          <article class="card">
+            <img src="images/A2.jpg" alt="Leen auto" />
+            <div class="pad">
+              <h3>Loaner car</h3>
+              <p>
+                A loaner car is available so you can stay mobile. Ask about
+                availability.
+              </p>
+            </div>
+          </article>
+        </div>
+        <button class="arrow arrow--right" aria-label="Scroll right">›</button>
+      </div>
+    </div>
+
+    <!-- Workshop -->
+    <section id="werkplaats" class="werkplaats">
+      <div class="werkplaats__inner">
+        <div class="werkplaats__copy">
+          <h2>The Workshop</h2>
+          <p>
+            In our new building at De Waal in Best you will find a well equiped
+            modern garage!
+          </p>
+        </div>
+
+        <div class="ig-slider" data-ig>
+          <div class="ig-track">
+            <img
+              class="ig-slide"
+              src="images/garage_photo_2.jpg"
+              alt="Werkplaats foto 2"
+            />
+            <img
+              class="ig-slide"
+              src="images/garage_photo_1.jpg"
+              alt="Werkplaats foto 1"
+            />
+          </div>
+          <button class="ig-btn ig-prev" aria-label="Vorige">‹</button>
+          <button class="ig-btn ig-next" aria-label="Volgende">›</button>
+          <div class="ig-dots" aria-label="Foto’s"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REVIEWS -->
+    <section id="reviews">
+      <h2>Customer reviews</h2>
+      <div class="reviews">
+        <div class="review">
+          <p>
+            “Very neat and quick service. My Audi A6 control unit was repaired
+            within a day. Excellent!”
+          </p>
+          <small>— Meho</small>
+        </div>
+        <div class="review">
+          <p>“Good service, very friendly, top!”</p>
+          <small>— Nick</small>
+        </div>
+        <div class="review">
+          <p>
+            “Top service! customeroriented and professional, true
+            recommendation!”
+          </p>
+          <small>— Roy</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <div class="band" id="contact">
+      <section>
+        <h2>Contact Details</h2>
+        <div class="contact-card">
+          <div class="contact-grid">
+            <div>
+              <strong>Adres</strong><br />
+              <a href="https://maps.app.goo.gl/yG3QcUqwSHxNFp6B7" \
+                >De Waal 83, 5684 PH Best</a
+              >
+            </div>
+            <div>
+              <strong>Email</strong><br />
+              <a href="mailto:dasgarageinfo@gmail.com"
+                >dasgarage911@gmail.com</a
+              >
+            </div>
+            <div>
+              <strong>Telefoon</strong><br />
+              <a href="tel:+31402542548">+31 6 59101481</a>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <script src="script.js"></script>
+
+    <!-- <footer>© <span id="year"></span> This website was made by Ana Dias</footer> -->
+  </body>
 </html>

@@ -27,7 +27,6 @@ window.addEventListener('resize', updateArrows);
 updateArrows();
 
 // WORKPLAATS SCROLLER
-// === Werkplaats IG-style slider ===
 document.querySelectorAll('[data-ig]').forEach(initIGSlider);
 
 function initIGSlider(root){
@@ -100,4 +99,26 @@ function initIGSlider(root){
 
   // on load
   update();
+}
+
+// === Mobile nav toggle with Lucide ===
+const navToggle = document.querySelector('.nav__toggle');
+const navLinks  = document.querySelector('.nav__links');
+
+// Render Lucide icons once the DOM is ready
+if (window.lucide) {
+  lucide.createIcons();
+}
+
+if (navToggle && navLinks) {
+  navToggle.addEventListener('click', () => {
+    const open = navLinks.classList.toggle('is-open');
+    navToggle.setAttribute('aria-expanded', open);
+
+    // Swap icon between "menu" and "x"
+    navToggle.innerHTML = open ? '<i data-lucide="x"></i>' : '<i data-lucide="menu"></i>';
+
+    // Re-render Lucide after swapping
+    if (window.lucide) lucide.createIcons();
+  });
 }
